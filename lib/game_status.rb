@@ -22,7 +22,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? {|cell| cell == "X" || cell == "O"}
+  board.all? {|cell| position_taken?(board, cell-1)}
 end
 
 def draw?(board)
